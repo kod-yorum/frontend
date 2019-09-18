@@ -56,6 +56,10 @@ export default {
     border-bottom: 1px solid #eee;
     display: flex;
     align-items: center;
+
+    &:nth-last-child(1) {
+      border-bottom: none;
+    }
   }
 }
 </style>
