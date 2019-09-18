@@ -2,6 +2,32 @@
 ================================================== */
 a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,button,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,iframe,img,input,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,select,small,span,strike,sub,summary,sup,table,tbody,td,textarea,tfoot,th,thead,time,tr,tt,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}a{text-decoration:none}img{border:0}:focus{outline:0}.clear{clear:both}
 
+/* #Aligns
+================================================== */
+.align {
+    display: flex;
+
+    &--left {
+        justify-content: flex-start;
+    }
+
+    &--right {
+        justify-content: flex-end;
+    }
+    
+    &--space-between {
+        justify-content: space-between;
+    }
+
+    &--horizontal-center {
+      justify-content: center;
+    }
+
+    &--vertical-center {
+      align-items: center;
+    }
+}
+
 /* #Margin Styles
 ================================================== */
   
@@ -141,3 +167,90 @@ a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,button,can
     margin-bottom: 70px !important;
   }
   
+
+  /* #Typography
+================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
+  font-weight: 400;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-weight: inherit;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 80px;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 72px;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 44px;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 36px;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+p {
+  margin: 0 0 15px 0;
+}
+
+p img {
+  margin: 0;
+}
+
+p.lead {
+  font-size: 21px;
+  line-height: 27px;
+  color: #555;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 700;
+  color: #333;
+}
+
+small {
+  font-size: 80%;
+}
+
+hr {
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 30px;
+  height: 0;
+}

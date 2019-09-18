@@ -1,1 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,800");
 @import "helper.scss";
+@import "grid.scss";
+
+html, body { font-family: 'Montserrat', sans-serif; }
+
+/* Table of Contents
+----------------------------------------------------------------------
+1. Buttons
+---------------------------------------------------------------------- */
+.button {
+    line-height: 48px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    float: left;
+    border-radius: .25rem;
+    user-select: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+
+    &--dark {
+        background-color: #343a40;
+        border-color: #343a40;
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem rgba(82,88,93,.5);
+        }
+    }
+
+    &--yellow {
+        background-color: #ffbc00;
+        border-color: #ffbc00;
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem rgba(222,165,6,.5);
+        }
+
+        &:hover {
+            background-color: #d9a000;
+            border-color: #cc9600;
+        }
+    }
+}
+.button + .button {
+    margin-left: 12px;
+}
