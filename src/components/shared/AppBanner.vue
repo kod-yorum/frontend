@@ -1,53 +1,78 @@
-<template>
-    <div class="banner align align--horizontal-center align--vertical-center" style="background: url(https://kommunity.com/img/covers/hero-1@2x.jpg) center center / cover rgb(221, 221, 221);">
-        <div class="col-lg-6 col-md-8 heroic">
-            <h1>Connecting Companies</h1>
-            <p>Explore communities that share your passion with millions of people</p>
-            <div class="fluid align align--horizontal-center">
-                <a href="#" class="button button--yellow">Get Started</a>
-            </div>
-        </div>
-    </div>
+<template lang="pug">
+    .banner.align.align--horizontal-center.align--vertical-center
+      .col-lg-8.col-md-8.heroic
+        h1 Çalışacak harika yerler bul
+        p 18 milyon şirket yorumu keşfedin
+          .col-md-10.row
+            form
+                input.search-input(placeholder="Bir şirket adı girin")
+                button.search-button Arama
 </template>
 
 <style lang="scss" scoped>
 .banner {
     width: 100%;
-    height: 650px;
+    height: 450px;
     float: left;
     position: relative;
 
     &:before {
-        position: absolute;
-        content: '';
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-                    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-                    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+      content: '';
+      position: absolute;
+      width: 440px;
+      height: 100%;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: url('../../assets/image/hero.png');
+      background-size: cover;
+      background-position: 0px 36px;
+      background-repeat: no-repeat;
     }
 
     .heroic {
         > h1 {
-            text-align: center;
-            font-size: 54px;
+            text-align: left;
+            font-size: 44px;
             font-weight: 800;
             line-height: 1.17;
-            color: #fff;
             margin: 0;
         }
 
         > p {
-            text-align: center;
+            text-align: left;
             margin-top: 15px;
             margin-bottom: 30px;
-            color: #fff;
             font-size: 18px;
             line-height: 1.73;
             font-weight: 300;
         }
     }
+}
+
+.search-input {
+  width: calc(100% - 240px);
+  height: 54px;
+  float: left;
+  border: 2px solid #ccc;
+  padding: 0px 27px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+  &:focus {
+    border-color: #085ff7;
+  }
+}
+.search-button {
+  width: 120px;
+  height: 54px;
+  float: left;
+  background-color: #2164f3;
+  color: #fff;
+  padding: 0 1.5rem;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin-left: -2px;
+  cursor: pointer;
 }
 </style>

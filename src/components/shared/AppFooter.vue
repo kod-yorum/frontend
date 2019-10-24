@@ -10,7 +10,7 @@
 footer {
     width: 100%;
     float: left;
-    background: #333;
+    background: #1a1e21;
     color: #fff;
     padding: 20px 0px;
     font-size: 14px;

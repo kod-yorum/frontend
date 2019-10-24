@@ -1,52 +1,33 @@
 <template>
-    <nav class="navbar" :class="{ 'navbar--colored' : isHeaderColored }">
-        <div class="container">
-            <div class="fluid align align--space-between">
-                <a href="#"></a>
-                <div>
-                    <a href="#" class="button button--dark">Login</a>
-                    <a href="#" class="button button--yellow">Register</a>
-                </div>
-            </div>
-        </div>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <a href="#" class="logo">KODYORUM</a>
+      </div>
     </nav>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      isHeaderColored: false
-    }
-  },
-  methods: {
-    handleScroll (event) {
-      if (window.scrollY > 50) {
-        this.isHeaderColored = true
-      } else {
-        this.isHeaderColored = false
-      }
-    }
-  },
-  created () {
-    window.addEventListener('scroll', this.handleScroll)
-  }
-}
-</script>
-
 <style lang="scss" scoped>
 .navbar {
-    position: fixed;
-    width: 100%;
-    background-color: transparent;
-    padding: 50px 1rem;
-    z-index: 99;
-    -webkit-transition: .2s ease-out;
-    transition: .2s ease-out;
-
-    &--colored {
-        background: rgba($color: #fff, $alpha: .8);
-        padding: 30px 1rem;
-    }
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+  height: 50px;
+  z-index: 99;
+  transition: .2s ease-out;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+}
+.logo {
+  color: #1a1e21;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  float: left;
+  display: flex;
+  align-items: center;
+  transition: .2s ease-out;
+  letter-spacing: .1em;
 }
 </style>
