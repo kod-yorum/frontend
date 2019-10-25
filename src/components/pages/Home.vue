@@ -1,35 +1,29 @@
 <template lang="pug">
   div
     AppBanner
-    .fluid
+    section.fluid
       .company-listing
         .col-md-12
           h2.align.align--horizontal-center Companies
           p.align.align--horizontal-center Explore communities that share your passion with millions of people
-          ul.company-list
-            li.company-list__item
-              CompanyListing
-            li.company-list__item
-              CompanyListing
-            li.company-list__item
-              CompanyListing
-            li.company-list__item
-              CompanyListing
-            li.company-list__item
-              CompanyListing
-            li.company-list__item
-              CompanyListing
+          .container
+            ul.company-list
+              li.company-list__item(v-for="item in 20")
+                CompanyListing
+            AddReviewWidget
 </template>
 
 <script>
 import AppBanner from '@/components/shared/AppBanner'
 import CompanyListing from '@/components/shared/CompanyListing'
+import AddReviewWidget from '@/components/shared/AddReviewWidget'
 
 export default {
   name: 'Home',
   components: {
     AppBanner,
-    CompanyListing
+    CompanyListing,
+    AddReviewWidget
   }
 }
 </script>
@@ -45,15 +39,13 @@ export default {
   width: 100%;
   float: left;
   &__item {
-    width: 100%;
-    height: 100px;
+    width: calc(25% - 12px);
+    height: 228px;
     float: left;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    align-items: center;
+    margin: 0 14.5px 12px 0;
 
-    &:nth-last-child(1) {
-      border-bottom: none;
+    &:nth-child(4n + 4) {
+      margin-right: 0;
     }
   }
 }

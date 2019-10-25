@@ -1,12 +1,12 @@
 <template lang="pug">
-    .banner.align.align--horizontal-center.align--vertical-center
-      .col-lg-8.col-md-8.heroic
-        h1 Çalışacak harika yerler bul
-        p 18 milyon şirket yorumu keşfedin
-          .col-md-10.row
-            form
-                input.search-input(placeholder="Bir şirket adı girin")
-                button.search-button Arama
+  .banner.align.align--horizontal-center.align--vertical-center
+    .col-lg-8.col-md-8.heroic
+      h1 Çalışacak harika yerler bul
+      p 18 milyon şirket yorumu keşfedin
+        .col-md-10.row
+          form
+            input.search-input(placeholder="Bir şirket adı girin")
+            button.search-button Arama
 </template>
 
 <style lang="scss" scoped>

@@ -1,9 +1,9 @@
-<template>
-  <div id="app">
-    <AppHeader/>
-    <router-view/>
-    <AppFooter/>
-  </div>
+<template lang="pug">
+  #app
+    include ./assets/icons.pug
+    AppHeader
+    router-view
+    AppFooter
 </template>
 
 <script>

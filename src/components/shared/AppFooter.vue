@@ -10,8 +10,8 @@
 footer {
     width: 100%;
     float: left;
-    background: #1a1e21;
-    color: #fff;
+    background: #fff;
+    color: #ccc;
     padding: 20px 0px;
     font-size: 14px;
 }
