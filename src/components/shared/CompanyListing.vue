@@ -1,26 +1,38 @@
 <template lang="pug">
   .card
-    .card__badge
+    .card__badge(v-if="data.job > 0")
       svg.card__badge-icon #[use(xlink:href="#icon-card-job")]
-      .card__badge-value 12
-    img.card__logo(src="https://images.theconversation.com/files/93616/original/image-20150902-6700-t2axrz.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip")
-    .card__title Google INC
+      .card__badge-value {{ data.job }}
+    img.card__logo(:src="data.logo")
+    .card__title {{ data.name }}
     .card__link
       svg.card__link-icon #[use(xlink:href="#icon-card-link")]
-      .card__link-text www.google.com
+      .card__link-text {{ data.website }}
     .card__rate
-      rate(:length="5" :value="2" :readonly="true")
+      rate(:length="5" :value="data.rate" :readonly="true")
     .card__bottom
       .card__bottom-item
         .card-detail-title REVIEWS
-        .card-detail-value 12
+        .card-detail-value {{ data.reviews }}
       .card__bottom-item
         .card-detail-title SALARIES
-        .card-detail-value 4
+        .card-detail-value {{ data.salaries }}
       .card__bottom-item
         .card-detail-title INTERVIEWS
-        .card-detail-value 310
+        .card-detail-value {{ data.interviews }}
 </template>
+
+<script>
+export default {
+  name: 'CompanyListing',
+  props: {
+    data: {
+      type: Object,
+      required: true
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .card {

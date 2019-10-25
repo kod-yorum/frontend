@@ -8,8 +8,8 @@
           p.align.align--horizontal-center Explore communities that share your passion with millions of people
           .container
             ul.company-list
-              li.company-list__item(v-for="item in 20")
-                CompanyListing
+              li.company-list__item(v-for="item in data")
+                CompanyListing(:data="item")
             AddReviewWidget
 </template>
 
@@ -20,6 +20,67 @@ import AddReviewWidget from '@/components/shared/AddReviewWidget'
 
 export default {
   name: 'Home',
+  data () {
+    return {
+      data: [
+        {
+          id: '1',
+          name: 'Google',
+          website: 'www.google.com',
+          logo: 'https://images.theconversation.com/files/93616/original/image-20150902-6700-t2axrz.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip',
+          job: '12',
+          rate: 3,
+          reviews: '12',
+          salaries: '5',
+          interviews: '9'
+        },
+        {
+          id: '2',
+          name: 'Facebook',
+          website: 'www.facebook.com',
+          logo: 'https://image.flaticon.com/icons/png/512/124/124010.png',
+          job: '3',
+          rate: 1,
+          reviews: '5',
+          salaries: '15',
+          interviews: '2'
+        },
+        {
+          id: '3',
+          name: 'Biges',
+          website: 'www.biges.com',
+          logo: 'https://www.biges.com/gorsel/icerik/Logo-Lansman5.jpg',
+          job: '0',
+          rate: 5,
+          reviews: '1',
+          salaries: '5',
+          interviews: '6'
+        },
+        {
+          id: '4',
+          name: 'Protel',
+          website: 'www.protel.com',
+          logo: 'http://www.computerworld.com.tr/wp-content/uploads/2016/09/protel-logo-cw.jpg',
+          job: '44',
+          rate: 5,
+          reviews: '15',
+          salaries: '1',
+          interviews: '0'
+        },
+        {
+          id: '5',
+          name: 'Epigra',
+          website: 'www.epigra.com',
+          logo: 'https://hesapno.com/logo/uploads/epigra.png',
+          job: '0',
+          rate: 2,
+          reviews: '5',
+          salaries: '0',
+          interviews: '0'
+        }
+      ]
+    }
+  },
   components: {
     AppBanner,
     CompanyListing,
