@@ -14,15 +14,15 @@ a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,button,can
     display: flex;
 
     &--left {
-        justify-content: flex-start;
+      justify-content: flex-start;
     }
 
     &--right {
-        justify-content: flex-end;
+      justify-content: flex-end;
     }
     
     &--space-between {
-        justify-content: space-between;
+      justify-content: space-between;
     }
 
     &--horizontal-center {
