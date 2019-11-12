@@ -25,6 +25,7 @@
   text-decoration: none;
   font-size: 14px;
   font-weight: 700;
+  line-height: 50px;
   float: left;
   display: flex;
   align-items: center;
