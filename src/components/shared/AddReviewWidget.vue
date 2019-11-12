@@ -2,8 +2,21 @@
   .rate-widget
     .rate-widget__item En son çalıştığınız şirketi değerlendirin:
     .rate-widget__item
-      button.big-button Değerlendir
+      button.big-button(@click="setModalVisibility(true)") Değerlendir
 </template>
+
+<script>
+import { mapActions } from 'vuex'
+
+export default {
+  name: 'AddReviewWidget',
+  methods: {
+    ...mapActions({
+      setModalVisibility: 'global/setModalVisibility'
+    })
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .rate-widget {
